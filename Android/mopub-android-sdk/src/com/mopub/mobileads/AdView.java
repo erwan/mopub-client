@@ -418,6 +418,9 @@ public class AdView extends WebView {
      */
     @Override
     public void loadUrl(String url) {
+        if (url == null) {
+            return;
+        }
         if (url.startsWith("javascript:")) {
             super.loadUrl(url);
             return;
